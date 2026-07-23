@@ -206,7 +206,8 @@ a {
 
 .hero-btns {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
   gap: 12px;
 }
 
@@ -804,21 +805,27 @@ a {
 
 .modal-actions-stacked {
   display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.btn-modal-primary, .btn-modal-secondary {
+  flex: 1;
+  display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 14px 10px;
+  gap: 6px;
+  border-radius: var(--r-md);
+  cursor: pointer;
 }
 
 .btn-modal-primary {
-  display: flex;
-  align-items: center;
-  gap: 14px;
   background: var(--logo-green);
   color: var(--white);
   border: none;
-  padding: 15px 20px;
-  border-radius: var(--r-md);
-  cursor: pointer;
-  text-align: left;
   box-shadow: 0 4px 14px rgba(15, 153, 70, 0.35);
   transition: transform var(--trans), background var(--trans);
 }
@@ -829,16 +836,9 @@ a {
 }
 
 .btn-modal-secondary {
-  display: flex;
-  align-items: center;
-  gap: 14px;
   background: var(--white);
   color: var(--dark);
   border: 2px solid var(--logo-orange);
-  padding: 15px 20px;
-  border-radius: var(--r-md);
-  cursor: pointer;
-  text-align: left;
   transition: border-color var(--trans), transform var(--trans);
 }
 

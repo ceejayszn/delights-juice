@@ -43,8 +43,8 @@
       <h1>Delight<br><span>Juice Bar</span></h1>
       <p class="hero-sub">100% Freshly Squeezed. Sweetly Delightful.</p>
       <div class="hero-btns">
-        <a href="#juices" class="btn-red">See the Menu</a>
-        <button class="btn-green-pay" onclick="openPayModal('pay')">Pay Till 4809304</button>
+        <a href="#juices" class="btn-red">🍹 See Menu</a>
+        <button class="btn-green-pay" onclick="openPayModal('pay')">💳 Pay Till 4809304</button>
       </div>
     </div>
     <div class="hero-img-wrap">
@@ -395,19 +395,19 @@
         <p class="modal-subtitle">Sweetly Delightful fresh juices & cool treats!</p>
         
         <div class="modal-actions-stacked">
-          <button class="btn-modal-primary" onclick="switchModalView('pay')">
-            <span class="btn-icon">💳</span>
-            <div class="btn-text-group">
-              <span class="btn-main-text">Pay Now</span>
-              <span class="btn-sub-text">M-PESA Till No. 4809304</span>
-            </div>
-          </button>
-          
           <button class="btn-modal-secondary" onclick="closePayModal(); scrollToMenu();">
             <span class="btn-icon">🍹</span>
             <div class="btn-text-group">
               <span class="btn-main-text">See Menu</span>
-              <span class="btn-sub-text">Browse Juices & Cool Treats</span>
+              <span class="btn-sub-text">Browse Items</span>
+            </div>
+          </button>
+
+          <button class="btn-modal-primary" onclick="switchModalView('pay')">
+            <span class="btn-icon">💳</span>
+            <div class="btn-text-group">
+              <span class="btn-main-text">Pay Till</span>
+              <span class="btn-sub-text">Till 4809304</span>
             </div>
           </button>
         </div>
