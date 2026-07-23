@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Delight Juice Bar — Fresh Hand-Crafted Juices & Cool Treats</title>
-  <meta name="description" content="Delight Juice Bar – Fresh natural juices, Simba Sticks & Lyons Maid Ice Pops. Pay via M-PESA Till 4809304." />
+  <title>Delight Juice Bar — Sweetly Delightful Fresh Juices & Cool Treats</title>
+  <meta name="description" content="Delight Juice Bar – Sweetly Delightful 100% freshly squeezed juices, Simba Sticks & Lyons Maid Ice Pops. Pay via M-PESA Till 4809304." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
@@ -39,9 +39,9 @@
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-text">
-      <p class="hero-tag">Freshly Made Daily • Est. 2024</p>
+      <p class="hero-tag">Sweetly Delightful • Est. 2024</p>
       <h1>Delight<br><span>Juice Bar</span></h1>
-      <p class="hero-sub">Natural. Cold-pressed. 100% Refreshing.</p>
+      <p class="hero-sub">100% Freshly Squeezed. Sweetly Delightful.</p>
       <div class="hero-btns">
         <a href="#juices" class="btn-red">See the Menu</a>
         <button class="btn-green-pay" onclick="openPayModal('pay')">Pay Till 4809304</button>
@@ -83,123 +83,33 @@
 
   <!-- JUICES MENU -->
   <section class="section" id="juices">
-    <h2 class="section-head">Our Juices</h2>
+    <h2 class="section-head">Our Freshly Squeezed Juices</h2>
     <div class="menu-grid">
 
-      <div class="menu-card">
-        <div class="menu-img">
-          <img src="images/2fd (1).jpg" alt="Thick Mess juice" loading="lazy" decoding="async" />
-        </div>
-        <div class="menu-body">
-          <div>
-            <div class="menu-header-row">
-              <span class="menu-tag">Natural Cold-Pressed</span>
-              <span class="menu-price">100 KES</span>
-            </div>
-            <h3 class="menu-title">Thick Mess</h3>
-            <p class="menu-desc">Mango · Sugarcane</p>
-          </div>
-          <div class="menu-card-action">
-            <button class="btn-card-pay" onclick="openPayModal('pay')">💳 Pay 100 BOB</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-img">
-          <img src="images/2fd (2).jpg" alt="Sweeet Cactus juice" loading="lazy" decoding="async" />
-        </div>
-        <div class="menu-body">
-          <div>
-            <div class="menu-header-row">
-              <span class="menu-tag">Natural Cold-Pressed</span>
-              <span class="menu-price price-alt">120 KES</span>
-            </div>
-            <h3 class="menu-title">Sweeet Cactus</h3>
-            <p class="menu-desc">Pineapple · Sugarcane</p>
-          </div>
-          <div class="menu-card-action">
-            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')">💳 Pay 120 KES</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-img">
-          <img src="images/2fd (3).jpg" alt="Crimson Red juice" loading="lazy" decoding="async" />
-        </div>
-        <div class="menu-body">
-          <div>
-            <div class="menu-header-row">
-              <span class="menu-tag">Natural Cold-Pressed</span>
-              <span class="menu-price">100 KES</span>
-            </div>
-            <h3 class="menu-title">Crimson Red</h3>
-            <p class="menu-desc">Beetroot · Dragon Fruit · Sugarcane</p>
-          </div>
-          <div class="menu-card-action">
-            <button class="btn-card-pay" onclick="openPayModal('pay')">💳 Pay 100 BOB</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-card">
-        <div class="menu-img">
-          <img src="images/2fd (4).jpg" alt="Tamarind juice" loading="lazy" decoding="async" />
-        </div>
-        <div class="menu-body">
-          <div>
-            <div class="menu-header-row">
-              <span class="menu-tag">Natural Cold-Pressed</span>
-              <span class="menu-price price-alt">120 KES</span>
-            </div>
-            <h3 class="menu-title">Tamarind</h3>
-            <p class="menu-desc">Tamarind · Sugarcane</p>
-          </div>
-          <div class="menu-card-action">
-            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')">💳 Pay 120 KES</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-card">
+      <!-- 1. BOBBA (TODAY'S SPECIAL & BEST SELLER) -->
+      <div class="menu-card menu-card-featured">
         <div class="menu-img">
           <img src="images/2fd (5).jpg" alt="Bobba juice" loading="lazy" decoding="async" />
         </div>
         <div class="menu-body">
           <div>
             <div class="menu-header-row">
-              <span class="menu-tag">Natural Cold-Pressed</span>
-              <span class="menu-price">100 KES</span>
+              <span class="menu-tag tag-special">⭐ Today's Special • Best Seller</span>
+              <div class="menu-prices-wrap">
+                <span class="price-chip chip-lg">Large 100 BOB</span>
+                <span class="price-chip chip-md">Med 70 BOB</span>
+              </div>
             </div>
             <h3 class="menu-title">Bobba</h3>
-            <p class="menu-desc">Lime · Ginger · Mint</p>
+            <p class="menu-desc">Lime · Ginger</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay" onclick="openPayModal('pay')">💳 Pay 100 BOB</button>
+            <button class="btn-card-pay" onclick="openPayModal('pay')">💳 Pay Now</button>
           </div>
         </div>
       </div>
 
-      <div class="menu-card">
-        <div class="menu-img">
-          <img src="images/2fd (6).jpg" alt="Sweet Sensation juice" loading="lazy" decoding="async" />
-        </div>
-        <div class="menu-body">
-          <div>
-            <div class="menu-header-row">
-              <span class="menu-tag">Natural Cold-Pressed</span>
-              <span class="menu-price price-alt">120 KES</span>
-            </div>
-            <h3 class="menu-title">Sweet Sensation</h3>
-            <p class="menu-desc">Sugarcane · Lime · Mint</p>
-          </div>
-          <div class="menu-card-action">
-            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')">💳 Pay 120 KES</button>
-          </div>
-        </div>
-      </div>
-
+      <!-- 2. SUN'S FLOWER -->
       <div class="menu-card">
         <div class="menu-img">
           <img src="images/2fd (7).jpg" alt="Sun's Flower juice" loading="lazy" decoding="async" />
@@ -207,14 +117,132 @@
         <div class="menu-body">
           <div>
             <div class="menu-header-row">
-              <span class="menu-tag">Natural Cold-Pressed</span>
-              <span class="menu-price">100 KES</span>
+              <span class="menu-tag">Freshly Squeezed</span>
+              <div class="menu-prices-wrap">
+                <span class="price-chip chip-lg">Large 120 BOB</span>
+                <span class="price-chip chip-md">Med 80 BOB</span>
+              </div>
             </div>
             <h3 class="menu-title">Sun's Flower</h3>
             <p class="menu-desc">Passion Fruit · Mint</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay" onclick="openPayModal('pay')">💳 Pay 100 BOB</button>
+            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')">💳 Pay Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. THICK MESS -->
+      <div class="menu-card">
+        <div class="menu-img">
+          <img src="images/2fd (1).jpg" alt="Thick Mess juice" loading="lazy" decoding="async" />
+        </div>
+        <div class="menu-body">
+          <div>
+            <div class="menu-header-row">
+              <span class="menu-tag">Freshly Squeezed</span>
+              <div class="menu-prices-wrap">
+                <span class="price-chip chip-lg">Large 120 BOB</span>
+                <span class="price-chip chip-md">Med 80 BOB</span>
+              </div>
+            </div>
+            <h3 class="menu-title">Thick Mess</h3>
+            <p class="menu-desc">Mango · Sugarcane</p>
+          </div>
+          <div class="menu-card-action">
+            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')">💳 Pay Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. SWEEET CACTUS -->
+      <div class="menu-card">
+        <div class="menu-img">
+          <img src="images/2fd (2).jpg" alt="Sweeet Cactus juice" loading="lazy" decoding="async" />
+        </div>
+        <div class="menu-body">
+          <div>
+            <div class="menu-header-row">
+              <span class="menu-tag">Freshly Squeezed</span>
+              <div class="menu-prices-wrap">
+                <span class="price-chip chip-lg">Large 120 BOB</span>
+                <span class="price-chip chip-md">Med 80 BOB</span>
+              </div>
+            </div>
+            <h3 class="menu-title">Sweeet Cactus</h3>
+            <p class="menu-desc">Pineapple · Sugarcane</p>
+          </div>
+          <div class="menu-card-action">
+            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')">💳 Pay Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. TAMARIND -->
+      <div class="menu-card">
+        <div class="menu-img">
+          <img src="images/2fd (4).jpg" alt="Tamarind juice" loading="lazy" decoding="async" />
+        </div>
+        <div class="menu-body">
+          <div>
+            <div class="menu-header-row">
+              <span class="menu-tag">Freshly Squeezed</span>
+              <div class="menu-prices-wrap">
+                <span class="price-chip chip-lg">Large 120 BOB</span>
+                <span class="price-chip chip-md">Med 80 BOB</span>
+              </div>
+            </div>
+            <h3 class="menu-title">Tamarind</h3>
+            <p class="menu-desc">Pure Tamarind</p>
+          </div>
+          <div class="menu-card-action">
+            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')">💳 Pay Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6. SWEET SENSATION -->
+      <div class="menu-card">
+        <div class="menu-img">
+          <img src="images/2fd (6).jpg" alt="Sweet Sensation juice" loading="lazy" decoding="async" />
+        </div>
+        <div class="menu-body">
+          <div>
+            <div class="menu-header-row">
+              <span class="menu-tag">Freshly Squeezed</span>
+              <div class="menu-prices-wrap">
+                <span class="price-chip chip-lg">Large 100 BOB</span>
+                <span class="price-chip chip-md">Med 70 BOB</span>
+              </div>
+            </div>
+            <h3 class="menu-title">Sweet Sensation</h3>
+            <p class="menu-desc">Sugarcane · Lime · Mint</p>
+          </div>
+          <div class="menu-card-action">
+            <button class="btn-card-pay" onclick="openPayModal('pay')">💳 Pay Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7. CRIMSON RED -->
+      <div class="menu-card">
+        <div class="menu-img">
+          <img src="images/2fd (3).jpg" alt="Crimson Red juice" loading="lazy" decoding="async" />
+        </div>
+        <div class="menu-body">
+          <div>
+            <div class="menu-header-row">
+              <span class="menu-tag">Freshly Squeezed</span>
+              <div class="menu-prices-wrap">
+                <span class="price-chip chip-lg">Large 100 BOB</span>
+                <span class="price-chip chip-md">Med 70 BOB</span>
+              </div>
+            </div>
+            <h3 class="menu-title">Crimson Red</h3>
+            <p class="menu-desc">Beetroot · Sugarcane</p>
+          </div>
+          <div class="menu-card-action">
+            <button class="btn-card-pay" onclick="openPayModal('pay')">💳 Pay Now</button>
           </div>
         </div>
       </div>
@@ -340,7 +368,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <img src="images/official_logo.jpg" alt="Delight Juice Bar" class="footer-logo" />
-    <p>🍹 Delight Juice Bar — Naturally Refreshing</p>
+    <p>🍹 Delight Juice Bar — Sweetly Delightful</p>
     <p class="foot-sub">M-PESA Till No: <strong>4809304</strong> | Call to Order</p>
     <p class="foot-copy">&copy; 2026 Delight Juice Bar. Est. 2024. All Rights Reserved.</p>
   </footer>
@@ -364,7 +392,7 @@
           <img src="images/official_logo.jpg" alt="Delight Juice Bar" class="modal-logo-img" />
         </div>
         <h2 class="modal-title">Welcome to Delight Juice Bar!</h2>
-        <p class="modal-subtitle">What would you like to do today?</p>
+        <p class="modal-subtitle">Sweetly Delightful fresh juices & cool treats!</p>
         
         <div class="modal-actions-stacked">
           <button class="btn-modal-primary" onclick="switchModalView('pay')">

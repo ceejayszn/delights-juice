@@ -400,12 +400,18 @@ a {
   justify-content: space-between;
 }
 
+.menu-card-featured {
+  border: 2px solid var(--logo-orange);
+  background: #FFFDF9;
+}
+
 .menu-header-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 6px;
+  gap: 6px;
+  margin-bottom: 8px;
 }
 
 .menu-tag {
@@ -416,17 +422,37 @@ a {
   letter-spacing: 0.5px;
 }
 
-.menu-price {
+.menu-tag.tag-special {
+  color: #D97A0A;
+  background: #FFF3E0;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-weight: 800;
+}
+
+.menu-prices-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.price-chip {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--r-full);
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.chip-lg {
   background: var(--logo-lime-light);
   color: var(--logo-green-dark);
-  font-size: 14px;
-  font-weight: 900;
-  padding: 4px 12px;
-  border-radius: var(--r-full);
   border: 1px solid #C8EC9F;
 }
 
-.menu-price.price-alt {
+.chip-md {
   background: #FFFBEB;
   color: #B45309;
   border: 1px solid #FDE68A;
