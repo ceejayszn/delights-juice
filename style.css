@@ -46,7 +46,7 @@ html {
 }
 
 body {
-  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Helvetica', 'Arial', -apple-system, BlinkMacSystemFont, sans-serif;
   background: var(--white);
   color: var(--black);
   line-height: 1.5;
@@ -96,10 +96,10 @@ a {
 .nav-logo-img {
   width: 44px;
   height: 44px;
-  border-radius: 50%;
+  border-radius: 8px;
   object-fit: cover;
-  border: 2px solid var(--logo-orange);
-  box-shadow: 0 2px 8px rgba(247, 148, 29, 0.3);
+  border: none;
+  box-shadow: none;
 }
 
 .nav-logo-text {
@@ -664,9 +664,9 @@ a {
 .footer-logo {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: 8px;
   margin: 0 auto 12px;
-  border: 2.5px solid var(--logo-yellow);
+  border: none;
 }
 
 .footer p { margin-bottom: 4px; }
@@ -780,10 +780,10 @@ a {
 .modal-logo-img {
   width: 76px;
   height: 76px;
-  border-radius: 50%;
+  border-radius: 8px;
   margin: 0 auto;
-  border: 3px solid var(--logo-orange);
-  box-shadow: var(--shadow-sm);
+  border: none;
+  box-shadow: none;
 }
 
 .modal-header-badge {
