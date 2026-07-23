@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Delight's — Fresh Juice & Cool Treats</title>
-  <meta name="description" content="Delight's – Fresh hand-crafted juices, Simba Sticks & Lyons Maid Ice Pops. Order now." />
+  <title>Delight Juice Bar — Fresh Hand-Crafted Juices & Cool Treats</title>
+  <meta name="description" content="Delight Juice Bar – Fresh natural juices, Simba Sticks & Lyons Maid Ice Pops. Pay via M-PESA Till 4809304." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/jpeg" href="favicon.jpg" />
+  <link rel="shortcut icon" type="image/jpeg" href="favicon.jpg" />
+  <link rel="apple-touch-icon" href="favicon.jpg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,30 +18,74 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <span class="nav-logo">🍹 Delight's</span>
-      <button class="nav-burger" id="burger" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="#home" class="nav-brand">
+        <img src="images/official_logo.jpg" alt="Delight Juice Bar Logo" class="nav-logo-img" />
+        <span class="nav-logo-text">Delight Juice Bar</span>
+      </a>
+      <div class="nav-right">
+        <button class="btn-pay-nav" onclick="openPayModal('pay')">
+          <span class="mpesa-dot"></span> Pay Till 4809304
+        </button>
+        <button class="nav-burger" id="burger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
     <div class="nav-links" id="navLinks">
       <a href="#juices" onclick="closeNav()">Juices</a>
       <a href="#treats" onclick="closeNav()">Treats</a>
+      <a href="#location" onclick="closeNav()">Location Pin</a>
       <a href="#contact" onclick="closeNav()">Contact</a>
+      <button class="btn-pay-drawer" onclick="closeNav(); openPayModal('pay');">
+        💳 Pay Now (Till 4809304)
+      </button>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-text">
-      <p class="hero-tag">Freshly Made Daily</p>
-      <h1>Delight's<br><span>Fresh Juice</span></h1>
-      <p class="hero-sub">Natural. Cold-pressed. No added sugar.</p>
-      <a href="#juices" class="btn-red">See the Menu</a>
+      <p class="hero-tag">Freshly Made Daily • Est. 2024</p>
+      <h1>Delight<br><span>Juice Bar</span></h1>
+      <p class="hero-sub">Natural. Cold-pressed. 100% Refreshing.</p>
+      <div class="hero-btns">
+        <a href="#juices" class="btn-red">See the Menu</a>
+        <button class="btn-green-pay" onclick="openPayModal('pay')">💳 Pay Till 4809304</button>
+      </div>
     </div>
     <div class="hero-img-wrap">
       <img src="images/2fd (7).jpg" alt="Sun's Flower juice" />
     </div>
   </section>
+
+  <!-- QUICK INFO BAR -->
+  <div class="info-bar">
+    <div class="info-item" onclick="copyTillNumber()">
+      <span class="info-icon">💳</span>
+      <div>
+        <span class="info-label">M-PESA Till No.</span>
+        <span class="info-val">4809304 (Tap to Copy)</span>
+      </div>
+    </div>
+    <div class="info-item">
+      <a href="tel:+254798169278" class="info-link">
+        <span class="info-icon">📞</span>
+        <div>
+          <span class="info-label">Order / Call Us</span>
+          <span class="info-val">+254 798 169278</span>
+        </div>
+      </a>
+    </div>
+    <div class="info-item">
+      <a href="https://www.google.com/maps/search/Delight%20Juice%20Bar/@-1.15264809,36.91776181,17z?hl=en" target="_blank" class="info-link">
+        <span class="info-icon">📍</span>
+        <div>
+          <span class="info-label">Location Pin</span>
+          <span class="info-val">Find Us on Google Maps</span>
+        </div>
+      </a>
+    </div>
+  </div>
 
   <!-- JUICES MENU -->
   <section class="section" id="juices">
@@ -47,7 +94,7 @@
 
       <div class="menu-card">
         <div class="menu-img">
-          <img src="images/2fd (1).jpg" alt="Thick Mess juice" />
+          <img src="images/2fd (1).jpg" alt="Thick Mess juice" loading="lazy" decoding="async" />
         </div>
         <div class="menu-body">
           <h3>Thick Mess</h3>
@@ -57,7 +104,7 @@
 
       <div class="menu-card">
         <div class="menu-img">
-          <img src="images/2fd (2).jpg" alt="Sweeet Cactus juice" />
+          <img src="images/2fd (2).jpg" alt="Sweeet Cactus juice" loading="lazy" decoding="async" />
         </div>
         <div class="menu-body">
           <h3>Sweeet Cactus</h3>
@@ -67,7 +114,7 @@
 
       <div class="menu-card">
         <div class="menu-img">
-          <img src="images/2fd (3).jpg" alt="Crimson Red juice" />
+          <img src="images/2fd (3).jpg" alt="Crimson Red juice" loading="lazy" decoding="async" />
         </div>
         <div class="menu-body">
           <h3>Crimson Red</h3>
@@ -77,7 +124,7 @@
 
       <div class="menu-card">
         <div class="menu-img">
-          <img src="images/2fd (4).jpg" alt="Tamarind juice" />
+          <img src="images/2fd (4).jpg" alt="Tamarind juice" loading="lazy" decoding="async" />
         </div>
         <div class="menu-body">
           <h3>Tamarind</h3>
@@ -87,7 +134,7 @@
 
       <div class="menu-card">
         <div class="menu-img">
-          <img src="images/2fd (5).jpg" alt="Bobba juice" />
+          <img src="images/2fd (5).jpg" alt="Bobba juice" loading="lazy" decoding="async" />
         </div>
         <div class="menu-body">
           <h3>Bobba</h3>
@@ -97,7 +144,7 @@
 
       <div class="menu-card">
         <div class="menu-img">
-          <img src="images/2fd (6).jpg" alt="Sweet Sensation juice" />
+          <img src="images/2fd (6).jpg" alt="Sweet Sensation juice" loading="lazy" decoding="async" />
         </div>
         <div class="menu-body">
           <h3>Sweet Sensation</h3>
@@ -107,7 +154,7 @@
 
       <div class="menu-card">
         <div class="menu-img">
-          <img src="images/2fd (7).jpg" alt="Sun's Flower juice" />
+          <img src="images/2fd (7).jpg" alt="Sun's Flower juice" loading="lazy" decoding="async" />
         </div>
         <div class="menu-body">
           <h3>Sun's Flower</h3>
@@ -180,35 +227,143 @@
 
   </section>
 
-  <!-- CONTACT -->
-  <section class="section contact-section" id="contact">
-    <h2 class="section-head">Find Us</h2>
+  <!-- LOCATION & CONTACT -->
+  <section class="section contact-section" id="location">
+    <h2 class="section-head">Find & Contact Us</h2>
     <div class="contact-list">
-      <a href="tel:+123456789" class="contact-row" id="cta-call">
+
+      <div class="contact-row highlight-row" onclick="openPayModal('pay')">
+        <span class="c-icon">💳</span>
+        <div class="c-info">
+          <span class="c-title">Payment Mode (M-PESA)</span>
+          <span class="c-sub">Till No. <strong>4809304</strong> (Tap to Pay)</span>
+        </div>
+        <button class="btn-copy-sm" onclick="event.stopPropagation(); copyTillNumber();">Copy</button>
+      </div>
+
+      <a href="https://www.google.com/maps/search/Delight%20Juice%20Bar/@-1.15264809,36.91776181,17z?hl=en" target="_blank" class="contact-row" id="cta-map">
+        <span class="c-icon">📍</span>
+        <div class="c-info">
+          <span class="c-title">Location Pin (Google Maps)</span>
+          <span class="c-sub">Delight Juice Bar, Kenya</span>
+        </div>
+        <span class="c-arrow">➔</span>
+      </a>
+
+      <a href="tel:+254798169278" class="contact-row" id="cta-call">
         <span class="c-icon">📞</span>
-        <span>+123-456-7890</span>
+        <div class="c-info">
+          <span class="c-title">Phone Support / Order</span>
+          <span class="c-sub">+254 798 169278</span>
+        </div>
+        <button class="btn-copy-sm" onclick="event.preventDefault(); event.stopPropagation(); copyPhone();">Copy</button>
       </a>
-      <a href="mailto:hello@delightsjuice.com" class="contact-row" id="cta-email">
-        <span class="c-icon">✉️</span>
-        <span>hello@delightsjuice.com</span>
-      </a>
-      <a href="#" class="contact-row" id="cta-insta">
+
+      <a href="https://www.instagram.com/delightjuice.bar/" target="_blank" class="contact-row" id="cta-insta">
         <span class="c-icon">📸</span>
-        <span>@delightsjuice</span>
+        <div class="c-info">
+          <span class="c-title">Instagram</span>
+          <span class="c-sub">@delightjuice.bar</span>
+        </div>
+        <span class="c-arrow">➔</span>
       </a>
+
+      <a href="https://www.tiktok.com/@veen_enj" target="_blank" class="contact-row" id="cta-tiktok">
+        <span class="c-icon">🎵</span>
+        <div class="c-info">
+          <span class="c-title">TikTok</span>
+          <span class="c-sub">@veen_enj</span>
+        </div>
+        <span class="c-arrow">➔</span>
+      </a>
+
     </div>
   </section>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <p>🍹 Delight's — Naturally Refreshing</p>
-    <p class="foot-copy">&copy; 2026 Delight's Fresh Juice</p>
+    <img src="images/official_logo.jpg" alt="Delight Juice Bar" class="footer-logo" />
+    <p>🍹 Delight Juice Bar — Naturally Refreshing</p>
+    <p class="foot-sub">M-PESA Till No: <strong>4809304</strong> | Tel: <strong>+254 798 169278</strong></p>
+    <p class="foot-copy">&copy; 2026 Delight Juice Bar. Est. 2024. All Rights Reserved.</p>
   </footer>
 
-  <!-- FAB -->
-  <a href="#contact" class="fab" id="fab" aria-label="Contact">📞</a>
+  <!-- FLOATING ACTION BUTTONS -->
+  <div class="fab-group">
+    <button onclick="openPayModal('pay')" class="fab fab-pay" aria-label="Pay Till 4809304">
+      💳 <span>Till 4809304</span>
+    </button>
+    <a href="tel:+254798169278" class="fab fab-call" aria-label="Call Us">📞</a>
+  </div>
 
-  <!-- TOAST -->
+  <!-- POPUP / MODAL (Welcome & Payment Choice) -->
+  <div class="modal-overlay" id="payModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closePayModal()">&times;</button>
+      
+      <!-- VIEW 1: WELCOME POPUP CHOICE -->
+      <div id="modalChoiceView" class="modal-view">
+        <div class="modal-header-logo">
+          <img src="images/official_logo.jpg" alt="Delight Juice Bar" class="modal-logo-img" />
+        </div>
+        <h2 class="modal-title">Welcome to Delight Juice Bar!</h2>
+        <p class="modal-subtitle">What would you like to do today?</p>
+        
+        <div class="modal-actions-stacked">
+          <button class="btn-modal-primary" onclick="switchModalView('pay')">
+            <span class="btn-icon">💳</span>
+            <div class="btn-text-group">
+              <span class="btn-main-text">Pay Now</span>
+              <span class="btn-sub-text">M-PESA Till No. 4809304</span>
+            </div>
+          </button>
+          
+          <button class="btn-modal-secondary" onclick="closePayModal(); scrollToMenu();">
+            <span class="btn-icon">🍹</span>
+            <div class="btn-text-group">
+              <span class="btn-main-text">See Menu</span>
+              <span class="btn-sub-text">Browse Juices & Cool Treats</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- VIEW 2: PAY DISPLAY VIEW -->
+      <div id="modalPayView" class="modal-view" style="display: none;">
+        <div class="modal-header-badge">
+          <span class="mpesa-badge">M-PESA TILL PAYMENT</span>
+        </div>
+        <h2 class="modal-title">Pay Delight Juice Bar</h2>
+        <p class="modal-subtitle">Use M-PESA Buy Goods & Services below:</p>
+
+        <div class="till-box">
+          <span class="till-label">LIPA NA M-PESA TILL NO.</span>
+          <div class="till-number-display" id="tillNumberText">4809304</div>
+          <button class="btn-copy-till" onclick="copyTillNumber()">
+            <span id="copyBtnIcon">📋</span> <span id="copyBtnText">Copy Till Number</span>
+          </button>
+        </div>
+
+        <div class="pay-instructions">
+          <ol>
+            <li>Go to <strong>M-PESA</strong> menu on your phone</li>
+            <li>Select <strong>Lipa na M-PESA</strong> &rarr; <strong>Buy Goods and Services</strong></li>
+            <li>Enter Till Number: <strong class="highlight-code">4809304</strong></li>
+            <li>Enter Amount & your M-PESA PIN to confirm</li>
+          </ol>
+        </div>
+
+        <div class="modal-footer-btns">
+          <button class="btn-done-pay" onclick="closePayModal(); scrollToMenu();">
+            ✅ Done (Back to Menu)
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
   <div class="toast" id="toast"></div>
 
   <script src="app.js"></script>
