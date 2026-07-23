@@ -924,11 +924,23 @@ a {
   .hero {
     flex-direction: row;
     align-items: center;
-    padding: 104px 24px 44px;
+    justify-content: space-between;
+    gap: 36px;
+    padding: 110px 24px 50px;
   }
   .hero-text { flex: 1; }
-  .hero-img-wrap { flex: 1; }
-  .hero-img-wrap img { height: 340px; }
+  .hero-img-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .hero-img-wrap img {
+    height: 420px;
+    max-width: 100%;
+    width: auto;
+    object-fit: contain;
+  }
 
   .info-bar {
     grid-template-columns: repeat(3, 1fr);
@@ -957,6 +969,9 @@ a {
 }
 
 @media (min-width: 960px) {
+  .hero-img-wrap img {
+    height: 460px;
+  }
   .menu-grid { grid-template-columns: repeat(2, 1fr); }
   .flavours-grid { grid-template-columns: repeat(5, 1fr); }
 }
