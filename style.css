@@ -46,13 +46,19 @@ html {
 }
 
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: var(--white);
+  font-family: 'Josefin Sans', sans-serif;
+  background: #FFFFFF url('images/bg_mobile.png') no-repeat center top / cover fixed;
   color: var(--black);
   line-height: 1.5;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+@media (min-width: 640px) {
+  body {
+    background: #FFFFFF url('images/bg_desktop.png') no-repeat center top / cover fixed;
+  }
 }
 
 img {
@@ -783,6 +789,24 @@ a {
 .modal-header-badge {
   text-align: center;
   margin-bottom: 8px;
+}
+
+.mpesa-logo-badge {
+  height: 42px;
+  width: auto;
+  max-width: 160px;
+  object-fit: contain;
+  margin: 0 auto;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.mpesa-icon-btn {
+  height: 22px;
+  width: auto;
+  object-fit: contain;
+  vertical-align: middle;
+  display: inline-block;
 }
 
 .mpesa-badge {
