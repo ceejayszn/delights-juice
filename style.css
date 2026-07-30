@@ -20,26 +20,26 @@
   --logo-orange:       #F7941D; /* Warm Orange Accent */
   --logo-orange-dark:  #D97A0A; /* Deep Orange */
   
-  /* Black & Neutral Palette */
+  /* Black & High Contrast Neutral Palette */
   --black:             #0F172A; /* Slate Black */
   --dark:              #1E293B; /* Deep Charcoal */
-  --mid:               #475569; /* Soft Slate Muted */
+  --mid:               #334155; /* High Contrast Dark Slate */
   --light-gray:        #F8FAFC; /* Subtle Off-White Background */
   --white:             #FFFFFF; /* Pure White */
-  --border-light:      #E2E8F0; /* Elegant Subtle Border */
-  --border-card:       rgba(15, 23, 42, 0.08); /* Premium Soft Border */
+  --border-light:      #CBD5E1; /* High Contrast Border */
+  --border-card:       rgba(15, 23, 42, 0.12); /* Crisp Soft Border */
   
-  /* Radii & Spacing */
+  /* Radii & Spacing - Optimized for Zero Wasted Space */
   --r-sm:              8px;
-  --r-md:              16px;
-  --r-lg:              24px;
+  --r-md:              14px;
+  --r-lg:              20px;
   --r-full:            9999px;
   
   /* Micro-Interactions & Shadows */
   --trans:             0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  --shadow-sm:         0 2px 8px rgba(15, 23, 42, 0.04);
-  --shadow-md:         0 10px 30px -5px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
-  --shadow-lg:         0 20px 40px -10px rgba(15, 23, 42, 0.14), 0 8px 16px -4px rgba(15, 23, 42, 0.06);
+  --shadow-sm:         0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md:         0 8px 24px -4px rgba(15, 23, 42, 0.10), 0 3px 6px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg:         0 16px 36px -8px rgba(15, 23, 42, 0.16), 0 6px 12px -4px rgba(15, 23, 42, 0.08);
 }
 
 html {
@@ -49,9 +49,9 @@ html {
 
 body {
   font-family: 'Josefin Sans', sans-serif;
-  background: #FFFFFF url('images/bg_mobile.png') no-repeat center top / cover fixed;
+  background: #F8FAFC url('images/bg_mobile.png') no-repeat center top / cover fixed;
   color: var(--black);
-  line-height: 1.5;
+  line-height: 1.45;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -380,7 +380,7 @@ a {
 .menu-grid {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 16px;
 }
 
 .menu-card {
@@ -392,40 +392,45 @@ a {
   border-radius: var(--r-md);
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  padding: 14px;
-  gap: 18px;
+  padding: 12px 14px;
+  gap: 14px;
   transition: border-color var(--trans), transform var(--trans), box-shadow var(--trans);
 }
 
 .menu-card:hover {
-  border-color: rgba(15, 153, 70, 0.3);
-  transform: translateY(-4px);
+  border-color: rgba(15, 153, 70, 0.4);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
 
 .menu-img {
   flex-shrink: 0;
-  width: 135px;
-  height: 135px;
-  border-radius: 12px;
+  width: 110px;
+  height: 110px;
+  border-radius: 10px;
   overflow: hidden;
   background: #F8FAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .menu-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Full drink display without top/bottom cropping */
   object-position: center;
   transition: transform 0.35s ease;
 }
 
 .menu-card:hover .menu-img img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .menu-body {
-  padding: 4px;
+  padding: 2px 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -434,8 +439,9 @@ a {
 }
 
 .menu-card-featured {
-  border: 1.5px solid var(--logo-orange);
+  border: 2px solid var(--logo-orange);
   background: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(247, 148, 29, 0.12);
 }
 
 .menu-header-row {
@@ -443,12 +449,12 @@ a {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
-  margin-bottom: 8px;
+  gap: 6px;
+  margin-bottom: 6px;
 }
 
 .menu-tag {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   color: var(--logo-green);
   text-transform: uppercase;
@@ -458,7 +464,16 @@ a {
 .menu-tag.tag-special {
   color: var(--white);
   background: var(--logo-orange);
-  padding: 4px 10px;
+  padding: 3px 10px;
+  border-radius: var(--r-full);
+  font-weight: 800;
+  font-size: 11px;
+}
+
+.menu-tag.tag-bitter {
+  color: var(--white);
+  background: #086F31;
+  padding: 3px 10px;
   border-radius: var(--r-full);
   font-weight: 800;
   font-size: 11px;
@@ -467,14 +482,14 @@ a {
 .menu-prices-wrap {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   flex-wrap: wrap;
 }
 
 .price-chip {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 800;
-  padding: 4px 12px;
+  padding: 4px 10px;
   border-radius: var(--r-full);
   display: inline-block;
   white-space: nowrap;
@@ -487,26 +502,29 @@ a {
 
 .chip-md {
   background: #F1F5F9;
-  color: var(--dark);
-  border: 1px solid #E2E8F0;
+  color: #0F172A;
+  border: 1px solid #CBD5E1;
+  font-weight: 800;
 }
 
 .menu-title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 800;
   color: var(--black);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   letter-spacing: -0.3px;
+  line-height: 1.25;
 }
 
 .menu-desc {
-  font-size: 15px;
+  font-size: 14px;
   color: var(--mid);
-  font-weight: 600;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
 .menu-card-action {
-  margin-top: 14px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -516,9 +534,9 @@ a {
   background: var(--logo-green);
   color: var(--white);
   border: none;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
-  padding: 9px 20px;
+  padding: 8px 18px;
   border-radius: var(--r-full);
   cursor: pointer;
   display: inline-flex;
@@ -540,6 +558,72 @@ a {
 
 .btn-card-pay.btn-pay-alt:hover {
   background: var(--dark);
+}
+
+/* ===== B.Y.O.D & EXTRAS SPECIAL CARDS ===== */
+.byod-banner {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+  color: #FFFFFF;
+  border-radius: var(--r-md);
+  padding: 20px;
+  margin-top: 24px;
+  border: 2px solid var(--logo-yellow);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.25);
+}
+
+.byod-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.byod-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--logo-yellow);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.byod-badge {
+  background: var(--logo-green);
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: var(--r-full);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.byod-desc {
+  font-size: 15px;
+  color: #E2E8F0;
+  font-weight: 600;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.extras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.extra-chip {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--r-sm);
+  padding: 10px 14px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: #FFFFFF;
 }
 
 /* ===== TREATS ===== */
@@ -1013,6 +1097,87 @@ a {
 .toast.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
+}
+
+/* ===== MOBILE SPECIFIC OPTIMIZATIONS (< 640px) ===== */
+@media (max-width: 639px) {
+  .hero {
+    padding: 76px 16px 20px;
+    gap: 20px;
+  }
+
+  .hero h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    margin-bottom: 18px;
+    color: #1E293B;
+    font-weight: 700;
+  }
+
+  .section {
+    padding: 36px 16px;
+  }
+
+  .section-head {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .menu-grid {
+    gap: 12px;
+  }
+
+  .menu-card {
+    padding: 10px;
+    gap: 10px;
+    border-radius: 12px;
+  }
+
+  .menu-img {
+    width: 95px;
+    height: 95px;
+    border-radius: 8px;
+    padding: 3px;
+  }
+
+  .menu-title {
+    font-size: 18px;
+  }
+
+  .menu-desc {
+    font-size: 13px;
+  }
+
+  .price-chip {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .btn-card-pay {
+    font-size: 12px;
+    padding: 7px 14px;
+  }
+
+  .byod-banner {
+    padding: 16px;
+    margin-top: 16px;
+  }
+
+  .byod-title {
+    font-size: 19px;
+  }
+
+  .treat-block {
+    margin-bottom: 28px;
+  }
+
+  .flavour-card img {
+    height: 100px;
+  }
 }
 
 /* ===== RESPONSIVE DESKTOP ===== */
