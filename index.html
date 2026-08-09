@@ -7,7 +7,7 @@
   <meta name="description" content="Delight Juice Bar – Sweetly Delightful 100% freshly squeezed juices, Simba Sticks & Lyons Maid Ice Pops. Pay via M-PESA Till 4809304." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,400;1,600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/jpeg" href="favicon.jpg" />
   <link rel="shortcut icon" type="image/jpeg" href="favicon.jpg" />
   <link rel="apple-touch-icon" href="favicon.jpg" />
@@ -23,16 +23,19 @@
         <span class="nav-logo-text">Delight Juice Bar</span>
       </a>
       <div class="nav-right">
+        <button class="btn-nav-pay" onclick="openPayModal('pay')" aria-label="Pay Till">
+          <img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" />
+        </button>
         <button class="nav-burger" id="burger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
     <div class="nav-links" id="navLinks">
-      <a href="#juices" onclick="closeNav()">Juices</a>
-      <a href="#treats" onclick="closeNav()">Treats</a>
-      <a href="#location" onclick="closeNav()">Location Pin</a>
-      <a href="#contact" onclick="closeNav()">Contact</a>
+      <a href="#juices" onclick="closeNav()"><span class="emoji-apple">🍹</span> Fresh Juices</a>
+      <a href="#treats" onclick="closeNav()"><span class="emoji-apple">🍦</span> Cool Treats</a>
+      <a href="#location" onclick="closeNav()"><span class="emoji-apple">📍</span> Location Pin</a>
+      <a href="#contact" onclick="closeNav()"><span class="emoji-apple">📞</span> Contact Us</a>
     </div>
   </nav>
 
@@ -44,7 +47,7 @@
       <p class="hero-sub">Crafted daily with 100% natural ingredients for a sweetly delightful experience.</p>
       <div class="hero-btns">
         <a href="#juices" class="btn-red">🍹 See Menu</a>
-        <button class="btn-green-pay" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till 4809304</button>
+        <button class="btn-green-pay" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
       </div>
     </div>
     <div class="hero-img-wrap">
@@ -393,34 +396,44 @@
     <!-- SIMBA STICKS -->
     <div class="treat-block">
       <div class="treat-header">
-        <img src="images/7.jpg" alt="Oohi Ice Cream" class="brand-logo" />
-        <div>
-          <h3 class="treat-title">Simba Sticks</h3>
-          <div class="price-badge">
-            <img src="images/5.jpg" alt="50 KSH" />
-          </div>
+        <div class="treat-brand">
+          <img src="images/7.jpg" alt="Ooh! Ice Cream" class="brand-logo" />
+          <h3 class="treat-title">Simba Sticks Ice Cream</h3>
+        </div>
+        <div class="price-badge-wrap">
+          <img src="images/5.jpg" alt="50 KSH/=" class="price-badge-img" />
         </div>
       </div>
 
       <div class="flavours-grid">
         <div class="flavour-card">
-          <img src="images/1.jpg" alt="Choc Delight Simba Stick" />
+          <div class="flavour-card-img-wrap">
+            <img src="images/1.jpg" alt="Choc Delight Simba Stick" />
+          </div>
           <p>Choc Delight</p>
         </div>
         <div class="flavour-card">
-          <img src="images/6.jpg" alt="Choc Nut Simba Stick" />
+          <div class="flavour-card-img-wrap">
+            <img src="images/6.jpg" alt="Choc Nut Simba Stick" />
+          </div>
           <p>Choc Nut</p>
         </div>
         <div class="flavour-card">
-          <img src="images/2.jpg" alt="White Chocolate with Nuts Simba Stick" />
+          <div class="flavour-card-img-wrap">
+            <img src="images/2.jpg" alt="White Chocolate with Nuts Simba Stick" />
+          </div>
           <p>White Choc & Nuts</p>
         </div>
         <div class="flavour-card">
-          <img src="images/3.jpg" alt="Strawberry Simba Stick" />
+          <div class="flavour-card-img-wrap">
+            <img src="images/3.jpg" alt="Strawberry Simba Stick" />
+          </div>
           <p>Strawberry</p>
         </div>
         <div class="flavour-card">
-          <img src="images/4.jpg" alt="Caramel Crunch Simba Stick" />
+          <div class="flavour-card-img-wrap">
+            <img src="images/4.jpg" alt="Caramel Crunch Simba Stick" />
+          </div>
           <p>Caramel Crunch</p>
         </div>
       </div>
@@ -505,14 +518,6 @@
     <p class="foot-sub">M-PESA Till No: <strong>4809304</strong> | Call to Order</p>
     <p class="foot-copy">&copy; 2026 Delight Juice Bar. Est. 2024. All Rights Reserved.</p>
   </footer>
-
-  <!-- FLOATING ACTION BUTTONS -->
-  <div class="fab-group">
-    <button onclick="openPayModal('pay')" class="fab fab-pay" aria-label="Pay Till 4809304">
-      <img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> <span>Till 4809304</span>
-    </button>
-    <a href="tel:+254798169278" class="fab fab-call" aria-label="Call Us">📞</a>
-  </div>
 
   <!-- POPUP / MODAL (Welcome & Payment Choice) -->
   <div class="modal-overlay" id="payModal">
