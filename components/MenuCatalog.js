@@ -65,22 +65,23 @@ export default function MenuCatalog({ onAddToCart, onQuickOrder, onOpenMpesa }) 
       {/* Category Tabs */}
       <div className="flex flex-wrap items-center justify-center gap-2 mb-10" id="wellness">
         {[
-          { id: 'all', label: 'All Products' },
-          { id: 'juices', label: 'Raw Juices' },
-          { id: 'smoothies', label: 'Creamy Smoothies' },
-          { id: 'wellness', label: 'Herbal Elixirs & Shots' },
-          { id: 'treats', label: 'Cool Treats & Pops' },
+          { id: 'all', label: 'All Blends', emoji: '🍹' },
+          { id: 'juices', label: 'Raw Juices', emoji: '🥤' },
+          { id: 'smoothies', label: 'Creamy Smoothies', emoji: '🥭' },
+          { id: 'wellness', label: 'Herbal Elixirs & Shots', emoji: '🌿' },
+          { id: 'treats', label: 'Cool Treats & Pops', emoji: '🍦' },
         ].map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-4 py-2 rounded-xl text-sm font-bold transition-all border ${
+            className={`px-4 py-2 rounded-xl text-sm font-bold transition-all border flex items-center space-x-2 ${
               activeTab === tab.id
                 ? 'bg-red-600 text-white border-red-700 shadow-sm'
                 : 'bg-white text-gray-700 hover:bg-gray-100 border-gray-300'
             }`}
           >
-            {tab.label}
+            <span className="emoji-apple">{tab.emoji}</span>
+            <span>{tab.label}</span>
           </button>
         ))}
       </div>
