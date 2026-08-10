@@ -60,8 +60,62 @@ if (payModal) {
 
 // Escape key listener
 document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closePayModal();
+  if (e.key === 'Escape') {
+    closePayModal();
+    closeOrderModal();
+  }
 });
+
+// --- ORDER MODAL ENGINE ---
+const orderModal = document.getElementById('orderModal');
+const orderItemName = document.getElementById('orderItemName');
+
+function openOrderModal(itemName = 'Delight Raw Juice') {
+  if (orderItemName) {
+    orderItemName.value = itemName;
+  }
+  if (orderModal) {
+    orderModal.classList.add('active');
+  }
+  document.body.style.overflow = 'hidden';
+}
+
+function closeOrderModal() {
+  if (orderModal) {
+    orderModal.classList.remove('active');
+  }
+  document.body.style.overflow = '';
+}
+
+if (orderModal) {
+  orderModal.addEventListener('click', (e) => {
+    if (e.target === orderModal) closeOrderModal();
+  });
+}
+
+function handleSendOrder(e) {
+  e.preventDefault();
+  const item = document.getElementById('orderItemName')?.value || 'Juice';
+  const size = document.getElementById('orderItemSize')?.value || 'Large';
+  const name = document.getElementById('orderCustomerName')?.value || 'Valued Customer';
+  const phone = document.getElementById('orderCustomerPhone')?.value || '';
+  const fulfillment = document.querySelector('input[name="fulfillment"]:checked')?.value || 'Takeaway Pickup';
+
+  const text = `Hello Delight Juice Bar! 🍹✨\n\n` +
+               `I'd like to place an order:\n` +
+               `🧃 *Item:* ${item}\n` +
+               `🥤 *Size:* ${size}\n` +
+               `📦 *Fulfillment:* ${fulfillment}\n` +
+               `👤 *Name:* ${name}\n` +
+               `📞 *Phone:* ${phone}\n` +
+               `💳 *Payment:* M-PESA Till 4809304\n\n` +
+               `Please confirm my order! Thank you 🙏`;
+
+  const whatsappUrl = `https://wa.me/254798169278?text=${encodeURIComponent(text)}`;
+  window.open(whatsappUrl, '_blank');
+  showToast(`Order created for ${name}! Opening WhatsApp...`);
+  closeOrderModal();
+}
 
 // --- CLIPBOARD COPY FUNCTIONS ---
 function copyTillNumber() {

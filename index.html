@@ -22,20 +22,21 @@
         <img src="images/official_logo.jpg" alt="Delight Juice Bar Logo" class="nav-logo-img" />
         <span class="nav-logo-text">Delight Juice Bar</span>
       </a>
-      <div class="nav-right">
+      <div class="nav-links" id="navLinks">
+        <a href="#juices" onclick="closeNav()"><span class="emoji-apple">🍹</span> Fresh Juices</a>
+        <a href="#treats" onclick="closeNav()"><span class="emoji-apple">🍦</span> Cool Treats</a>
+        <a href="#location" onclick="closeNav()"><span class="emoji-apple">📍</span> Location Pin</a>
+        <a href="#contact" onclick="closeNav()"><span class="emoji-apple">📞</span> Contact Us</a>
+      </div>
+      <div class="nav-right" style="display: flex; align-items: center; gap: 8px;">
         <button class="btn-nav-pay" onclick="openPayModal('pay')" aria-label="Pay Till">
-          <img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" />
+          <img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till
         </button>
+        <button class="btn-card-order nav-order-btn" style="padding: 6px 14px; font-size: 13px;" onclick="openOrderModal('Delight Juice Bar')">🛒 Order</button>
         <button class="nav-burger" id="burger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
-    </div>
-    <div class="nav-links" id="navLinks">
-      <a href="#juices" onclick="closeNav()"><span class="emoji-apple">🍹</span> Fresh Juices</a>
-      <a href="#treats" onclick="closeNav()"><span class="emoji-apple">🍦</span> Cool Treats</a>
-      <a href="#location" onclick="closeNav()"><span class="emoji-apple">📍</span> Location Pin</a>
-      <a href="#contact" onclick="closeNav()"><span class="emoji-apple">📞</span> Contact Us</a>
     </div>
   </nav>
 
@@ -45,9 +46,10 @@
       <p class="hero-tag">🍹 100% Pure & Freshly Squeezed • Est. 2024</p>
       <h1>Pure Fruit Juices<br><span>& Cool Treats</span></h1>
       <p class="hero-sub">Crafted daily with 100% natural ingredients for a sweetly delightful experience.</p>
-      <div class="hero-btns">
+      <div class="hero-btns" style="display: flex; gap: 8px; flex-wrap: wrap;">
         <a href="#juices" class="btn-red">🍹 See Menu</a>
         <button class="btn-green-pay" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+        <button class="btn-amber-order" onclick="openOrderModal('Delight Fresh Juice')"><span class="emoji-apple">🛒</span> Order Now</button>
       </div>
     </div>
     <div class="hero-img-wrap">
@@ -63,6 +65,7 @@
         <span class="info-label">M-PESA Till No.</span>
         <span class="info-val">4809304 (Tap to Copy)</span>
       </div>
+      <button class="btn-card-order" style="margin-left: auto; padding: 6px 12px; font-size: 12px; flex: initial;" onclick="event.stopPropagation(); openOrderModal('Till 4809304 Order');">🛒 Order</button>
     </div>
     <div class="info-item">
       <a href="tel:+254798169278" class="info-link">
@@ -107,7 +110,8 @@
             <p class="menu-desc">Refreshing Lime · Pure Zesty Ginger</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Now</button>
+            <button class="btn-card-pay" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+            <button class="btn-card-order" onclick="openOrderModal('Bobba Special Juice')"><span class="emoji-apple">🛒</span> Order Now</button>
           </div>
         </div>
       </div>
@@ -130,7 +134,8 @@
             <p class="menu-desc">Tangy Passion Fruit · Sweet Sugarcane</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Now</button>
+            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+            <button class="btn-card-order" onclick="openOrderModal('Sun\'s Flower Juice')"><span class="emoji-apple">🛒</span> Order Now</button>
           </div>
         </div>
       </div>
@@ -153,7 +158,8 @@
             <p class="menu-desc">Rich Mango Blend · Sweet Sugarcane</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Now</button>
+            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+            <button class="btn-card-order" onclick="openOrderModal('Thick Mess Juice')"><span class="emoji-apple">🛒</span> Order Now</button>
           </div>
         </div>
       </div>
@@ -176,7 +182,8 @@
             <p class="menu-desc">Tropical Pineapple · Sweet Sugarcane</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Now</button>
+            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+            <button class="btn-card-order" onclick="openOrderModal('Sweeet Cactus Juice')"><span class="emoji-apple">🛒</span> Order Now</button>
           </div>
         </div>
       </div>
@@ -199,7 +206,8 @@
             <p class="menu-desc">Sweet & Tangy Pure Tamarind</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Now</button>
+            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+            <button class="btn-card-order" onclick="openOrderModal('Tamarind Juice')"><span class="emoji-apple">🛒</span> Order Now</button>
           </div>
         </div>
       </div>
@@ -222,7 +230,8 @@
             <p class="menu-desc">Naturally Sweet Sugarcane · Fresh Lime</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Now</button>
+            <button class="btn-card-pay" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+            <button class="btn-card-order" onclick="openOrderModal('Sweet Sensation Juice')"><span class="emoji-apple">🛒</span> Order Now</button>
           </div>
         </div>
       </div>
@@ -245,7 +254,8 @@
             <p class="menu-desc">Nutrient-Rich Beetroot · Sweet Sugarcane</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Now</button>
+            <button class="btn-card-pay" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+            <button class="btn-card-order" onclick="openOrderModal('Crimson Red Juice')"><span class="emoji-apple">🛒</span> Order Now</button>
           </div>
         </div>
       </div>
@@ -268,7 +278,8 @@
             <p class="menu-desc">Creamy Fresh Banana · Tropical Blend</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Now</button>
+            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+            <button class="btn-card-order" onclick="openOrderModal('Bana Splash Juice')"><span class="emoji-apple">🛒</span> Order Now</button>
           </div>
         </div>
       </div>
@@ -291,7 +302,8 @@
             <p class="menu-desc">Smooth & Rich Creamy Avocado</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Now</button>
+            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+            <button class="btn-card-order" onclick="openOrderModal('Avocado Smoothie')"><span class="emoji-apple">🛒</span> Order Now</button>
           </div>
         </div>
       </div>
@@ -314,7 +326,8 @@
             <p class="menu-desc">Zesty Citrus · Sun-Ripened Orange</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Now</button>
+            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+            <button class="btn-card-order" onclick="openOrderModal('Sunkissed Juice')"><span class="emoji-apple">🛒</span> Order Now</button>
           </div>
         </div>
       </div>
@@ -337,7 +350,8 @@
             <p class="menu-desc">Refreshing Mint · Zesty Splash</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Now</button>
+            <button class="btn-card-pay btn-pay-alt" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+            <button class="btn-card-order" onclick="openOrderModal('Minty Affair Juice')"><span class="emoji-apple">🛒</span> Order Now</button>
           </div>
         </div>
       </div>
@@ -360,7 +374,8 @@
             <p class="menu-desc">Healing Aloe Vera · Sugarcane · Ginger</p>
           </div>
           <div class="menu-card-action">
-            <button class="btn-card-pay" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Now</button>
+            <button class="btn-card-pay" onclick="openPayModal('pay')"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /> Pay Till</button>
+            <button class="btn-card-order" onclick="openOrderModal('Bitter Herbs Wellness Juice')"><span class="emoji-apple">🛒</span> Order Now</button>
           </div>
         </div>
       </div>
@@ -475,7 +490,10 @@
           <span class="c-title">Payment Mode (M-PESA)</span>
           <span class="c-sub">Till No. <strong>4809304</strong> (Tap to Pay)</span>
         </div>
-        <button class="btn-copy-sm" onclick="event.stopPropagation(); copyTillNumber();">Copy</button>
+        <div style="display: flex; gap: 6px;" onclick="event.stopPropagation();">
+          <button class="btn-copy-sm" onclick="copyTillNumber()">Copy</button>
+          <button class="btn-copy-sm" style="background:#D92626;" onclick="openOrderModal('M-PESA Till 4809304')">🛒 Order</button>
+        </div>
       </div>
 
       <a href="https://www.google.com/maps/search/Delight%20Juice%20Bar/@-1.15264809,36.91776181,17z?hl=en" target="_blank" class="contact-row" id="cta-map">
@@ -519,10 +537,19 @@
 
   <!-- FOOTER -->
   <footer class="footer">
-    <img src="images/official_logo.jpg" alt="Delight Juice Bar" class="footer-logo" />
-    <p>🍹 Delight Juice Bar — Sweetly Delightful</p>
-    <p class="foot-sub">M-PESA Till No: <strong>4809304</strong> | Call to Order</p>
-    <p class="foot-copy">&copy; 2026 Delight Juice Bar. Est. 2024. All Rights Reserved.</p>
+    <div class="footer-inner">
+      <div class="foot-left">
+        <img src="images/official_logo.jpg" alt="Delight Juice Bar" class="footer-logo" />
+        <span class="foot-brand">Delight Juice Bar</span>
+      </div>
+      <div class="foot-mid">
+        <span>M-PESA Till: <strong>4809304</strong></span>
+        <button class="btn-card-order" style="display:inline-flex; padding: 4px 12px; font-size: 11px; margin-left: 8px; vertical-align: middle;" onclick="openOrderModal('Footer Order')">🛒 Order Juice Now</button>
+      </div>
+      <div class="foot-right">
+        &copy; 2026 Delight Juice Bar. All Rights Reserved.
+      </div>
+    </div>
   </footer>
 
   <!-- POPUP / MODAL (Welcome & Payment Choice) -->
@@ -568,9 +595,14 @@
         <div class="till-box">
           <span class="till-label">LIPA NA M-PESA TILL NO.</span>
           <div class="till-number-display" id="tillNumberText">4809304</div>
-          <button class="btn-copy-till" onclick="copyTillNumber()">
-            <span id="copyBtnIcon">📋</span> <span id="copyBtnText">Copy Till Number</span>
-          </button>
+          <div style="display: flex; gap: 8px; justify-content: center; margin-top: 10px; flex-wrap: wrap;">
+            <button class="btn-copy-till" onclick="copyTillNumber()">
+              <span id="copyBtnIcon">📋</span> <span id="copyBtnText">Copy Till Number</span>
+            </button>
+            <button class="btn-copy-till" style="background-color: #2563EB;" onclick="closePayModal(); openOrderModal('M-PESA Order');">
+              🛒 Order Juice Now
+            </button>
+          </div>
         </div>
 
         <div class="pay-instructions">
@@ -582,13 +614,74 @@
           </ol>
         </div>
 
-        <div class="modal-footer-btns">
-          <button class="btn-done-pay" onclick="closePayModal(); scrollToMenu();">
+        <div class="modal-footer-btns" style="display: flex; gap: 8px;">
+          <button class="btn-done-pay" style="background: #2563EB; flex: 1;" onclick="closePayModal(); openOrderModal('M-PESA Till 4809304');">
+            🛒 Order Juice Now
+          </button>
+          <button class="btn-done-pay" style="flex: 1;" onclick="closePayModal(); scrollToMenu();">
             ✅ Done (Back to Menu)
           </button>
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <!-- QUICK ORDER MODAL -->
+  <div class="modal-overlay" id="orderModal">
+    <div class="modal-card">
+      <button class="modal-close" onclick="closeOrderModal()">&times;</button>
+      <div class="modal-header-logo">
+        <img src="images/official_logo.jpg" alt="Delight Juice Bar" class="modal-logo-img" />
+      </div>
+      <h2 class="modal-title">Order Fresh Juice 🍹</h2>
+      <p class="modal-subtitle">Quick Order for Store Pickup or Express Delivery</p>
+
+      <form id="orderForm" onsubmit="handleSendOrder(event)">
+        <div style="margin-bottom: 14px; text-align: left;">
+          <label style="font-weight: 800; font-size: 13px; display: block; margin-bottom: 4px; color: var(--black);">Selected Drink / Item</label>
+          <input type="text" id="orderItemName" readonly style="width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid #CBD5E1; font-weight: 800; background: #F8FAFC; color: #0F172A;" value="Bobba Special Juice" />
+        </div>
+
+        <div style="margin-bottom: 14px; text-align: left;">
+          <label style="font-weight: 800; font-size: 13px; display: block; margin-bottom: 4px; color: var(--black);">Select Cup Size</label>
+          <select id="orderItemSize" style="width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid #CBD5E1; font-weight: 700; color: #0F172A; background: white;">
+            <option value="Large (500ml)">Large (500ml) — 100/120 BOB</option>
+            <option value="Mid (350ml)">Mid (350ml) — 70/80 BOB</option>
+          </select>
+        </div>
+
+        <div style="margin-bottom: 14px; text-align: left;">
+          <label style="font-weight: 800; font-size: 13px; display: block; margin-bottom: 4px; color: var(--black);">Fulfillment Option</label>
+          <div style="display: flex; gap: 8px;">
+            <label style="flex:1; border:1px solid #CBD5E1; padding:10px; border-radius:8px; text-align:center; font-weight:700; cursor:pointer; font-size: 13px; background: white;">
+              <input type="radio" name="fulfillment" value="Takeaway Pickup" checked /> 🏬 Takeaway Pickup
+            </label>
+            <label style="flex:1; border:1px solid #CBD5E1; padding:10px; border-radius:8px; text-align:center; font-weight:700; cursor:pointer; font-size: 13px; background: white;">
+              <input type="radio" name="fulfillment" value="Dine-In (At Table)" /> 🪑 Dine-In (At Table)
+            </label>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 14px; text-align: left;">
+          <label style="font-weight: 800; font-size: 13px; display: block; margin-bottom: 4px; color: var(--black);">Your Name & Phone Number *</label>
+          <input type="text" id="orderCustomerName" required placeholder="Your Name (e.g. John)" style="width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid #CBD5E1; font-weight: 600; margin-bottom: 8px;" />
+          <input type="tel" id="orderCustomerPhone" required placeholder="WhatsApp Phone (e.g. 0798169278)" style="width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid #CBD5E1; font-weight: 600;" />
+        </div>
+
+        <div style="background: #FFFBEB; border: 1px solid #FDE68A; padding: 12px; border-radius: 10px; margin-bottom: 16px; text-align: center;">
+          <div style="font-weight: 800; font-size: 13px; color: #92400E;">💳 Pay via M-PESA Till: <strong style="font-size: 16px; color: #B45309;">4809304</strong></div>
+        </div>
+
+        <div style="display: flex; gap: 8px;">
+          <button type="submit" style="flex:1; background: #25D366; color: white; border: none; padding: 12px; border-radius: 10px; font-weight: 800; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px; font-size: 14px; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);">
+            💬 WhatsApp Order
+          </button>
+          <button type="button" onclick="closeOrderModal(); openPayModal('pay');" style="background: #059669; color: white; border: none; padding: 12px 14px; border-radius: 10px; font-weight: 800; cursor: pointer; font-size: 13px;">
+            💳 Pay Till
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 
