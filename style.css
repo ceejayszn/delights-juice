@@ -345,21 +345,25 @@ a:hover .site-icon-social {
 
 .hero-btns {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+  flex-wrap: nowrap;
+  margin-top: 14px;
 }
 
 .btn-red {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 5px;
   background: var(--logo-crimson);
   color: var(--white);
-  padding: 8px 16px;
+  padding: 4px 10px;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 800;
+  height: 28px;
+  white-space: nowrap;
   transition: transform var(--trans), background var(--trans);
 }
 
@@ -375,13 +379,13 @@ a:hover .site-icon-social {
   gap: 5px;
   background: #0F9946;
   color: var(--white);
-  padding: 5px 12px;
+  padding: 4px 10px;
   border-radius: 6px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   border: 1px solid #086F31;
   cursor: pointer;
-  height: 32px;
+  height: 28px;
   white-space: nowrap;
   transition: transform var(--trans), background var(--trans);
 }
@@ -758,22 +762,21 @@ a:hover .order-icon-svg {
   align-items: center;
   justify-content: flex-end;
   gap: 8px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .btn-card-pay {
-  background: var(--logo-green);
-  color: var(--white);
+  background: #0F9946;
+  color: #FFFFFF;
   border: 1px solid #086F31;
-  font-size: 11px;
-  font-weight: 800;
-  padding: 4px 10px;
+  padding: 4px 8px;
   height: 28px;
+  min-width: 34px;
   border-radius: 6px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
   white-space: nowrap;
   transition: background var(--trans), transform var(--trans);
 }
