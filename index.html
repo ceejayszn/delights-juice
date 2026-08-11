@@ -19,7 +19,7 @@
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <a href="#home" class="nav-brand">
-        <img src="images/official_logo.jpg" alt="Delight Juice Bar Logo" class="nav-logo-img" />
+        <img src="images/official_logo_nobg.png" alt="Delight Juice Bar Logo" class="nav-logo-img" />
         <span class="nav-logo-text">Delight Juice Bar</span>
       </a>
       <div class="nav-links" id="navLinks">
@@ -53,7 +53,7 @@
       </div>
     </div>
     <div class="hero-img-wrap">
-      <img src="images/official_logo.jpg" alt="Delight Juice Bar Logo" />
+      <img src="images/official_logo_nobg.png" alt="Delight Juice Bar Splash Logo" />
     </div>
   </section>
 
@@ -398,6 +398,11 @@
         <div class="extra-chip">🍋 Extra Lime</div>
         <div class="extra-chip">🌿 Extra Mint</div>
       </div>
+      <div style="margin-top: 16px; text-align: center;">
+        <button class="btn-amber-order" style="padding: 8px 18px; font-size: 13px;" onclick="openOrderModal('B.Y.O.D Custom Drink')">
+          <img src="images/icon_order_simple.svg" class="order-icon-svg" alt="" /> Order Custom Drink
+        </button>
+      </div>
     </div>
   </section>
 
@@ -415,8 +420,11 @@
           <img src="images/7.jpg" alt="Ooh! Ice Cream" class="brand-logo" />
           <h3 class="treat-title">Simba Sticks Ice Cream</h3>
         </div>
-        <div class="price-badge-wrap">
+        <div class="price-badge-wrap" style="display: flex; align-items: center; gap: 8px;">
           <img src="images/5.jpg" alt="50 KSH/=" class="price-badge-img" />
+          <button class="btn-card-order" style="padding: 6px 12px; font-size: 12px;" onclick="openOrderModal('Simba Stick Ice Cream (50/=)')">
+            <img src="images/icon_order_simple.svg" class="order-icon-svg" alt="" /> Order
+          </button>
         </div>
       </div>
 
@@ -426,36 +434,54 @@
             <img src="images/1.jpg" alt="Choc Delight Simba Stick" />
           </div>
           <p>Choc Delight</p>
+          <button class="btn-card-order" style="width: 100%; margin-top: 6px; padding: 4px 8px; font-size: 11px;" onclick="openOrderModal('Simba Stick - Choc Delight')">
+            <img src="images/icon_order_simple.svg" class="order-icon-svg" alt="" /> Order 50/=
+          </button>
         </div>
         <div class="flavour-card">
           <div class="flavour-card-img-wrap">
             <img src="images/6.jpg" alt="Choc Nut Simba Stick" />
           </div>
           <p>Choc Nut</p>
+          <button class="btn-card-order" style="width: 100%; margin-top: 6px; padding: 4px 8px; font-size: 11px;" onclick="openOrderModal('Simba Stick - Choc Nut')">
+            <img src="images/icon_order_simple.svg" class="order-icon-svg" alt="" /> Order 50/=
+          </button>
         </div>
         <div class="flavour-card">
           <div class="flavour-card-img-wrap">
             <img src="images/2.jpg" alt="White Chocolate with Nuts Simba Stick" />
           </div>
           <p>White Choc & Nuts</p>
+          <button class="btn-card-order" style="width: 100%; margin-top: 6px; padding: 4px 8px; font-size: 11px;" onclick="openOrderModal('Simba Stick - White Choc & Nuts')">
+            <img src="images/icon_order_simple.svg" class="order-icon-svg" alt="" /> Order 50/=
+          </button>
         </div>
         <div class="flavour-card">
           <div class="flavour-card-img-wrap">
             <img src="images/3.jpg" alt="Strawberry Simba Stick" />
           </div>
           <p>Strawberry</p>
+          <button class="btn-card-order" style="width: 100%; margin-top: 6px; padding: 4px 8px; font-size: 11px;" onclick="openOrderModal('Simba Stick - Strawberry')">
+            <img src="images/icon_order_simple.svg" class="order-icon-svg" alt="" /> Order 50/=
+          </button>
         </div>
         <div class="flavour-card">
           <div class="flavour-card-img-wrap">
             <img src="images/4.jpg" alt="Caramel Crunch Simba Stick" />
           </div>
           <p>Caramel Crunch</p>
+          <button class="btn-card-order" style="width: 100%; margin-top: 6px; padding: 4px 8px; font-size: 11px;" onclick="openOrderModal('Simba Stick - Caramel Crunch')">
+            <img src="images/icon_order_simple.svg" class="order-icon-svg" alt="" /> Order 50/=
+          </button>
         </div>
         <div class="flavour-card">
           <div class="flavour-card-img-wrap">
             <img src="images/10.jpg" alt="Simba Trio Pack" />
           </div>
           <p>Simba Trio Pack</p>
+          <button class="btn-card-order" style="width: 100%; margin-top: 6px; padding: 4px 8px; font-size: 11px;" onclick="openOrderModal('Simba Trio Pack (3-Pack)')">
+            <img src="images/icon_order_simple.svg" class="order-icon-svg" alt="" /> Order Trio Pack
+          </button>
         </div>
       </div>
 
@@ -466,11 +492,14 @@
 
     <!-- ICE POPS -->
     <div class="treat-block">
-      <div class="treat-header">
+      <div class="treat-header" style="display: flex; align-items: center; justify-content: space-between;">
         <div>
           <h3 class="treat-title">Delight's Ice Pop</h3>
           <span class="ice-price">Only 15/=</span>
         </div>
+        <button class="btn-card-order" style="padding: 8px 16px; font-size: 13px;" onclick="openOrderModal('Delight Ice Pop (15/=)')">
+          <img src="images/icon_order_simple.svg" class="order-icon-svg" alt="" /> Order Ice Pop (15/=)
+        </button>
       </div>
       <div class="ice-pop-wrap">
         <img src="images/8.jpg" alt="Lyons Maid Ice Pop — Orange, Cola, Lemon, Strawberry" />
@@ -539,7 +568,7 @@
   <footer class="footer">
     <div class="footer-inner">
       <div class="foot-left">
-        <img src="images/official_logo.jpg" alt="Delight Juice Bar" class="footer-logo" />
+        <img src="images/official_logo_nobg.png" alt="Delight Juice Bar" class="footer-logo" />
         <span class="foot-brand">Delight Juice Bar</span>
       </div>
       <div class="foot-mid">
@@ -560,7 +589,7 @@
       <!-- VIEW 1: WELCOME POPUP CHOICE -->
       <div id="modalChoiceView" class="modal-view">
         <div class="modal-header-logo">
-          <img src="images/official_logo.jpg" alt="Delight Juice Bar" class="modal-logo-img" />
+          <img src="images/official_logo_nobg.png" alt="Delight Juice Bar" class="modal-logo-img" />
         </div>
         <h2 class="modal-title">Welcome to Delight Juice Bar!</h2>
         <p class="modal-subtitle">Sweetly Delightful fresh juices & cool treats!</p>
@@ -632,7 +661,7 @@
     <div class="modal-card">
       <button class="modal-close" onclick="closeOrderModal()">&times;</button>
       <div class="modal-header-logo">
-        <img src="images/official_logo.jpg" alt="Delight Juice Bar" class="modal-logo-img" />
+        <img src="images/official_logo_nobg.png" alt="Delight Juice Bar" class="modal-logo-img" />
       </div>
       <h2 class="modal-title">Order Fresh Juice <img src="images/icon_cocktail.svg" class="site-icon-emoji" alt="" /></h2>
       <p class="modal-subtitle">Quick Order for Store Pickup or Express Delivery</p>

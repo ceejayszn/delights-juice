@@ -152,32 +152,36 @@ a:hover .site-icon-social {
 .nav-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
+  min-width: 0;
+  flex-shrink: 0;
+  text-decoration: none;
 }
 
 .nav-logo-img {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  object-fit: cover;
-  border: 1.5px solid var(--logo-crimson);
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.12));
 }
 
 .nav-logo-text {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 900;
   color: var(--black);
-  letter-spacing: -0.4px;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  line-height: 1.15;
+  letter-spacing: -0.3px;
+  white-space: nowrap;
+  line-height: 1;
 }
 
 .nav-right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 .nav-burger {
@@ -218,26 +222,27 @@ a:hover .site-icon-social {
   }
 
   .nav-brand {
-    gap: 8px;
-    min-width: 0;
+    gap: 6px;
+    flex-shrink: 0;
   }
 
   .nav-logo-img {
-    width: 36px;
-    height: 36px;
+    height: 32px;
+    width: auto;
     flex-shrink: 0;
   }
 
   .nav-logo-text {
-    font-size: 14px;
-    line-height: 1.15;
-    white-space: normal;
-    word-break: break-word;
-    max-width: 105px;
+    font-size: 13px;
+    line-height: 1;
+    white-space: nowrap;
+    max-width: none;
   }
 
   .nav-right {
-    gap: 6px !important;
+    gap: 5px !important;
+    flex-shrink: 0;
+  }
     flex-shrink: 0;
   }
 
@@ -438,14 +443,21 @@ a:hover .order-icon-svg {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 4px 0;
+  padding: 8px 0;
 }
 
 .hero-img-wrap img {
-  height: 200px;
+  height: 230px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(112, 193, 42, 0.35));
+  animation: floatSplash 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatSplash {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-8px); }
 }
 
 /* ===== QUICK INFO BAR (PREMIUM SLATE CARDS) ===== */
