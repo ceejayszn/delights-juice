@@ -1170,11 +1170,14 @@ a:hover .order-icon-svg {
 }
 
 .modal-logo-img {
-  width: 80px;
-  height: 80px;
-  border-radius: 12px;
-  margin: 0 auto;
-  border: 1.5px solid #CBD5E1;
+  width: 90px;
+  height: 90px;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  margin: 0 auto 10px;
+  border: 3.5px solid #0F9946;
+  box-shadow: 0 6px 20px rgba(15, 153, 70, 0.3);
+  display: block;
 }
 
 .modal-header-badge {
