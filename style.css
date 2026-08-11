@@ -1018,36 +1018,91 @@ a:hover .order-icon-svg {
   backdrop-filter: blur(8px);
 }
 
-.contact-list {
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.contact-card {
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  justify-content: space-between;
+  padding: 20px;
+  background: #FFFFFF;
+  border: 1.5px solid #E2E8F0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+  transition: all 0.25s ease;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  min-height: 180px;
 }
 
-.contact-row {
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--logo-green);
+  box-shadow: 0 10px 24px rgba(15, 153, 70, 0.15);
+}
+
+.contact-card.highlight-card {
+  border: 2px solid #0F9946;
+  background: #F0FDF4;
+}
+
+.contact-card-header {
   display: flex;
   align-items: center;
-  gap: 16px;
-  padding: 18px 22px;
-  background: var(--white);
-  border: 1px solid var(--border-card);
-  border-radius: var(--r-md);
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.contact-card-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #F8FAFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #E2E8F0;
+}
+
+.contact-card-title {
   font-size: 16px;
-  font-weight: 700;
-  box-shadow: var(--shadow-sm);
-  transition: border-color var(--trans), transform var(--trans), box-shadow var(--trans);
+  font-weight: 800;
+  color: var(--black);
+  margin-bottom: 4px;
+  line-height: 1.25;
 }
 
-.contact-row:hover {
-  border-color: var(--logo-green);
-  transform: translateX(4px);
-  box-shadow: var(--shadow-md);
+.contact-card-sub {
+  font-size: 13px;
+  color: var(--mid);
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
 }
 
-.highlight-row {
-  background: #FFFFFF;
-  border: 1.5px solid var(--logo-green);
-  cursor: pointer;
+.contact-card-footer {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .c-icon { font-size: 26px; flex-shrink: 0; }

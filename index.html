@@ -502,55 +502,79 @@
   <!-- LOCATION & CONTACT -->
   <section class="section contact-section" id="location">
     <h2 class="section-head">Find & Contact Us</h2>
-    <div class="contact-list">
+    <div class="contact-grid">
 
-      <div class="contact-row highlight-row" onclick="openPayModal('pay')">
-        <span class="c-icon"><img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" /></span>
-        <div class="c-info">
-          <span class="c-title">Payment Mode (M-PESA)</span>
-          <span class="c-sub">Till No. <strong>4809304</strong> (Tap to Pay)</span>
+      <!-- CARD 1: M-PESA -->
+      <div class="contact-card highlight-card" onclick="openPayModal('pay')" style="cursor: pointer;">
+        <div>
+          <div class="contact-card-header">
+            <div class="contact-card-icon">
+              <img src="images/mpesa.png" alt="M-PESA" class="mpesa-icon-btn" style="height: 20px; width: auto;" />
+            </div>
+            <span class="c-arrow">➔</span>
+          </div>
+          <h3 class="contact-card-title">Payment Mode (M-PESA)</h3>
+          <p class="contact-card-sub">Till No. <strong>4809304</strong> (Tap to Pay)</p>
         </div>
-        <div style="display: flex; gap: 6px;" onclick="event.stopPropagation();">
+        <div class="contact-card-footer" onclick="event.stopPropagation();">
           <button class="btn-copy-sm" onclick="copyTillNumber()">Copy</button>
-          <button class="btn-copy-sm" style="background:#D92626;" onclick="openOrderModal('M-PESA Till 4809304')"><img src="images/icon_order_simple.svg" class="order-icon-svg" alt="" /> Order</button>
+          <button class="btn-card-order" style="padding: 4px 10px; font-size: 11px;" onclick="openOrderModal('M-PESA Till 4809304')"><img src="images/icon_order_simple.svg" class="order-icon-svg" alt="" /> Order</button>
         </div>
       </div>
 
-      <a href="https://www.google.com/maps/search/Delight%20Juice%20Bar/@-1.15264809,36.91776181,17z?hl=en" target="_blank" class="contact-row" id="cta-map">
-        <span class="c-icon"><img src="images/icon_pin.svg" class="site-icon-social" alt="Location Pin" /></span>
-        <div class="c-info">
-          <span class="c-title">Location Pin (Google Maps)</span>
-          <span class="c-sub">Delight Juice Bar, Kenya</span>
+      <!-- CARD 2: LOCATION PIN -->
+      <a href="https://www.google.com/maps/search/Delight%20Juice%20Bar/@-1.15264809,36.91776181,17z?hl=en" target="_blank" class="contact-card" id="cta-map">
+        <div>
+          <div class="contact-card-header">
+            <div class="contact-card-icon">
+              <img src="images/icon_pin.svg" class="site-icon-social" alt="Location Pin" />
+            </div>
+            <span class="c-arrow">➔</span>
+          </div>
+          <h3 class="contact-card-title">Location Pin</h3>
+          <p class="contact-card-sub">Google Maps Directions<br><strong>Delight Juice Bar, Kenya</strong></p>
         </div>
-        <span class="c-arrow">➔</span>
+        <div class="contact-card-footer">
+          <span style="font-weight: 800; font-size: 12px; color: var(--logo-green);">Get Directions</span>
+          <span class="c-arrow">➔</span>
+        </div>
       </a>
 
-      <a href="tel:+254798169278" class="contact-row" id="cta-call">
-        <span class="c-icon"><img src="images/icon_phone.svg" class="site-icon-social" alt="Call to Order" /></span>
-        <div class="c-info">
-          <span class="c-title">Call to Order</span>
-          <span class="c-sub">Fresh juices & treats delivered</span>
+      <!-- CARD 3: CALL TO ORDER -->
+      <a href="tel:+254798169278" class="contact-card" id="cta-call">
+        <div>
+          <div class="contact-card-header">
+            <div class="contact-card-icon">
+              <img src="images/icon_phone.svg" class="site-icon-social" alt="Call to Order" />
+            </div>
+            <span class="c-arrow">➔</span>
+          </div>
+          <h3 class="contact-card-title">Call to Order</h3>
+          <p class="contact-card-sub">Direct Hotline Call<br><strong>Fresh juices & treats delivered</strong></p>
         </div>
-        <span class="c-arrow">➔</span>
+        <div class="contact-card-footer">
+          <span style="font-weight: 800; font-size: 12px; color: var(--logo-orange);">+254 798 169 278</span>
+          <span class="c-arrow">➔</span>
+        </div>
       </a>
 
-      <a href="https://www.instagram.com/delightjuice.bar/" target="_blank" class="contact-row" id="cta-insta">
-        <span class="c-icon"><img src="images/icon_instagram.svg" class="site-icon-social" alt="Instagram" /></span>
-        <div class="c-info">
-          <span class="c-title">Instagram</span>
-          <span class="c-sub">@delightjuice.bar</span>
+      <!-- CARD 4: SOCIAL CHANNELS -->
+      <div class="contact-card">
+        <div>
+          <div class="contact-card-header">
+            <div class="contact-card-icon">
+              <img src="images/icon_instagram.svg" class="site-icon-social" alt="Socials" style="height: 20px;" />
+            </div>
+            <span class="c-arrow">➔</span>
+          </div>
+          <h3 class="contact-card-title">Social Channels</h3>
+          <p class="contact-card-sub">Follow us on Instagram & TikTok for daily updates</p>
         </div>
-        <span class="c-arrow">➔</span>
-      </a>
-
-      <a href="https://www.tiktok.com/@veen_enj" target="_blank" class="contact-row" id="cta-tiktok">
-        <span class="c-icon"><img src="images/icon_tiktok.svg" class="site-icon-social" alt="TikTok" /></span>
-        <div class="c-info">
-          <span class="c-title">TikTok</span>
-          <span class="c-sub">@veen_enj</span>
+        <div class="contact-card-footer" style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <a href="https://www.instagram.com/delightjuice.bar/" target="_blank" class="btn-copy-sm" style="background:#E1306C; text-decoration:none; padding: 4px 8px; font-size: 10px; font-weight: 800;">Instagram</a>
+          <a href="https://www.tiktok.com/@veen_enj" target="_blank" class="btn-copy-sm" style="background:#000000; text-decoration:none; padding: 4px 8px; font-size: 10px; font-weight: 800;">TikTok</a>
         </div>
-        <span class="c-arrow">➔</span>
-      </a>
+      </div>
 
     </div>
   </section>
