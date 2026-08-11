@@ -425,8 +425,8 @@ a:hover .site-icon-social {
 }
 
 .order-icon-svg {
-  height: 15px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   object-fit: contain;
   vertical-align: middle;
   transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -434,7 +434,64 @@ a:hover .site-icon-social {
 
 button:hover .order-icon-svg,
 a:hover .order-icon-svg {
-  transform: scale(1.2) rotate(-5deg);
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* ===== SLEEK MODERN ARROW ORDER BUTTONS (REF: RECIPES / MENU DEMO) ===== */
+.btn-card-order,
+.btn-amber-order,
+.nav-order-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #0F172A;
+  color: #FFFFFF;
+  border: 1.5px solid #0F172A;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  height: 28px;
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  box-shadow: 2px 2px 0px #F7941D;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-card-order::after,
+.btn-amber-order::after,
+.nav-order-btn::after {
+  content: '➔';
+  font-size: 11px;
+  font-weight: 900;
+  color: #F7941D;
+  margin-left: 2px;
+  transition: transform 0.2s ease;
+}
+
+.btn-card-order:hover,
+.btn-amber-order:hover,
+.nav-order-btn:hover {
+  background: #1E293B;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #F7941D;
+}
+
+.btn-card-order:hover::after,
+.btn-amber-order:hover::after,
+.nav-order-btn:hover::after {
+  transform: translateX(3px);
+}
+
+.btn-amber-order {
+  height: 32px;
+  padding: 5px 14px;
+  font-size: 12px;
+  box-shadow: 2.5px 2.5px 0px #F7941D;
 }
 
 .hero-img-wrap {
